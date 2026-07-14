@@ -7,13 +7,513 @@
 </head>
 <body>
   <div id="video1" style="width:640px;"></div>
-  <script>
-    new ncplayer('video1', {
-      autostart: true,
-      playlist: [
-        { file: 'https://media.w3.org/2010/05/sintel/trailer.mp4' }
-      ]
-    });
-  </script>
+<script type="text/javascript" src="https://player.beta-vpe.naverncp.com/lib/js/hls.min.js"></script>
+<script type="text/javascript" src="https://player.beta-vpe.naverncp.com/lib/js/dash.all.min.js"></script>
+<script type="text/javascript" src="https://player.beta-vpe.naverncp.com/v2/ncplayer.2.0.0.js?access_key=77633db832c8a326dda80346f549e425"></script>
+
+<div id="video"></div>
+
+<script>
+let player = new ncplayer('video', {
+  "playlist": [
+    {
+      "file": "https://m4qgahqg2249.edge.naverncp.com/hls/a4oif2oPHP-HlGGWOFm29A__/endpoint/sample/221027_NAVER_Cloud_intro_Long_ver_AVC_,FHD_2Pass_30fps,HD_2Pass_30fps,SD_2Pass_30fps,.mp4.smil/master.m3u8",
+      "poster": "https://2ardrvaj2252.edge.naverncp.com/endpoint/sample/221027_NAVER_Cloud_intro_Long_ver_01.jpg",
+      "description": {
+        "title": "네이버클라우드 테스트 영상",
+        "created_at": "Wed Jul 13 2022 00:00:00 GMT+0900 (한국 표준시)",
+        "profile_name": "네이버클라우드",
+        "profile_image": "https://tkmenfxu2702.edge.naverncp.com/profile/202511/cf38c0603c57faacd99cbe6d967c38b3.png"
+      }
+    }
+  ],
+  "autostart": true,
+  "muted": false,
+  "keyboardShortcut": true,
+  "controls": true,
+  "ui": "all",
+  "controlBtn": {
+    "play": true,
+    "progressBar": true,
+    "fullscreen": true,
+    "volume": true,
+    "times": true,
+    "pictureInPicture": true,
+    "subtitle": false,
+    "setting": true
+  },
+  "progressBarColor": "#4299f5",
+  "controlActiveTime": 3000,
+  "startMutedInfoNotVisible": false,
+  "aspectRatio": "16/9",
+  "objectFit": "contain",
+  "playRateSetting": [
+    0.5,
+    0.75,
+    1,
+    1.5,
+    2
+  ],
+  "seekingPreview": true,
+  "autoPause": true,
+  "iosFullscreenNativeMode": true,
+  "repeat": false,
+  "lowLatencyMode": false,
+  "lang": "auto",
+  "touchGestures": true,
+  "descriptionNotVisible": false,
+  "visibleWatermark": false,
+  "watermarkConfig": null,
+  "layout": {
+    "pc": {
+      "vod": {
+        "order": [
+          "top",
+          "upper",
+          "center",
+          "lower",
+          "bottom"
+        ],
+        "top": [
+          {
+            "items": [
+              "MetaDesc"
+            ]
+          },
+          {
+            "wrapper": "Blank",
+            "items": [],
+            "align": "left"
+          },
+          {
+            "items": [
+              "ShareBtn"
+            ]
+          }
+        ],
+        "upper": [
+          {
+            "wrapper": "Blank",
+            "items": [],
+            "align": "left"
+          }
+        ],
+        "center": [
+          {
+            "items": [
+              "BigPlayBtn"
+            ],
+            "align": "center"
+          }
+        ],
+        "lower": [
+          {
+            "wrapper": "Blank",
+            "items": [
+              "SeekBar"
+            ],
+            "align": "center"
+          }
+        ],
+        "bottom": [
+          {
+            "wrapper": "Group",
+            "items": [
+              "PlayBtn"
+            ]
+          },
+          {
+            "wrapper": "Group",
+            "items": [
+              "NextPrevBtn"
+            ]
+          },
+          {
+            "wrapper": "Group",
+            "items": [
+              "VolumeBtn"
+            ]
+          },
+          {
+            "wrapper": "Group",
+            "items": [
+              "TimeBtn"
+            ]
+          },
+          {
+            "wrapper": "Blank",
+            "items": [],
+            "align": "left"
+          },
+          {
+            "wrapper": "Group",
+            "items": [
+              "SubtitleBtn",
+              "PipBtn",
+              "SettingBtn",
+              "FullscreenBtn"
+            ],
+            "cap": 2
+          }
+        ]
+      },
+      "live": {
+        "order": [
+          "top",
+          "upper",
+          "center",
+          "lower",
+          "bottom"
+        ],
+        "top": [
+          {
+            "items": [
+              "MetaDesc"
+            ]
+          }
+        ],
+        "upper": [],
+        "center": [
+          {
+            "items": [
+              "BigPlayBtn"
+            ],
+            "align": "center"
+          }
+        ],
+        "lower": [
+          {
+            "wrapper": "Blank",
+            "items": [
+              "SeekBar"
+            ],
+            "align": "center"
+          }
+        ],
+        "bottom": [
+          {
+            "wrapper": "Group",
+            "items": [
+              "PlayBtn"
+            ]
+          },
+          {
+            "wrapper": "Group",
+            "items": [
+              "NextPrevBtn"
+            ]
+          },
+          {
+            "wrapper": "Group",
+            "items": [
+              "VolumeBtn"
+            ]
+          },
+          {
+            "wrapper": "Group",
+            "items": [
+              "TimeBtn"
+            ]
+          },
+          {
+            "wrapper": "Blank"
+          },
+          {
+            "wrapper": "Group",
+            "items": [
+              "SubtitleBtn",
+              "PipBtn",
+              "SettingBtn",
+              "FullscreenBtn"
+            ],
+            "cap": 2
+          }
+        ]
+      }
+    },
+    "mobile": {
+      "vod": {
+        "order": [
+          "top",
+          "upper",
+          "center",
+          "lower",
+          "bottom"
+        ],
+        "top": [
+          {
+            "wrapper": "Group",
+            "items": [
+              "MuteBtn"
+            ]
+          },
+          {
+            "wrapper": "Blank",
+            "items": []
+          },
+          {
+            "wrapper": "Group",
+            "items": [
+              "PipBtn",
+              "SettingBtn"
+            ],
+            "cap": 2
+          }
+        ],
+        "upper": [
+          {
+            "wrapper": "Blank",
+            "items": []
+          }
+        ],
+        "center": [
+          {
+            "items": [
+              "BigPlayBtn"
+            ],
+            "align": "center"
+          }
+        ],
+        "lower": [
+          {
+            "wrapper": "Group",
+            "items": [
+              "TimeBtn"
+            ]
+          },
+          {
+            "wrapper": "Blank"
+          },
+          {
+            "wrapper": "Group",
+            "items": [
+              "SubtitleBtn",
+              "FullscreenBtn"
+            ]
+          }
+        ],
+        "bottom": [
+          {
+            "wrapper": "Blank",
+            "items": [
+              "SeekBar"
+            ],
+            "align": "center"
+          }
+        ]
+      },
+      "live": {
+        "order": [
+          "top",
+          "upper",
+          "center",
+          "lower",
+          "bottom"
+        ],
+        "top": [
+          {
+            "wrapper": "Group",
+            "items": [
+              "MuteBtn"
+            ]
+          },
+          {
+            "wrapper": "Blank",
+            "items": []
+          },
+          {
+            "wrapper": "Group",
+            "items": [
+              "PipBtn",
+              "SettingBtn"
+            ],
+            "cap": 2
+          }
+        ],
+        "upper": [
+          {
+            "wrapper": "Blank",
+            "items": []
+          }
+        ],
+        "center": [
+          {
+            "items": [
+              "BigPlayBtn"
+            ],
+            "align": "center"
+          }
+        ],
+        "lower": [
+          {
+            "wrapper": "Group",
+            "items": [
+              "TimeBtn"
+            ]
+          },
+          {
+            "wrapper": "Blank",
+            "items": []
+          },
+          {
+            "wrapper": "Group",
+            "items": [
+              "SubtitleBtn",
+              "FullscreenBtn"
+            ]
+          }
+        ],
+        "bottom": [
+          {
+            "wrapper": "Blank",
+            "items": [
+              "SeekBar"
+            ],
+            "align": "center"
+          }
+        ]
+      }
+    },
+    "fullscreen": {
+      "vod": {
+        "order": [
+          "top",
+          "center",
+          "lower",
+          "bottom"
+        ],
+        "top": [
+          {
+            "wrapper": "Blank",
+            "items": [
+              "MetaDesc"
+            ]
+          }
+        ],
+        "upper": null,
+        "center": [
+          {
+            "items": [
+              "BigPlayBtn"
+            ],
+            "align": "center"
+          }
+        ],
+        "lower": [
+          {
+            "wrapper": "Blank",
+            "items": [
+              "SeekBar"
+            ],
+            "align": "center"
+          }
+        ],
+        "bottom": [
+          {
+            "wrapper": "Group",
+            "items": [
+              "PlayBtn",
+              "PrevBtn",
+              "NextBtn"
+            ]
+          },
+          {
+            "wrapper": "Group",
+            "items": [
+              "VolumeBtn"
+            ]
+          },
+          {
+            "wrapper": "Group",
+            "items": [
+              "TimeBtn"
+            ]
+          },
+          {
+            "wrapper": "Blank"
+          },
+          {
+            "wrapper": "Group",
+            "items": [
+              "SubtitleBtn",
+              "SettingBtn",
+              "FullscreenBtn"
+            ],
+            "cap": 2
+          }
+        ]
+      },
+      "live": {
+        "order": [
+          "top",
+          "center",
+          "lower",
+          "bottom"
+        ],
+        "top": [
+          {
+            "wrapper": "Blank",
+            "items": [
+              "MetaDesc"
+            ]
+          }
+        ],
+        "upper": null,
+        "center": [
+          {
+            "items": [
+              "BigPlayBtn"
+            ],
+            "align": "center"
+          }
+        ],
+        "lower": [
+          {
+            "wrapper": "Blank",
+            "items": [
+              "SeekBar"
+            ],
+            "align": "center"
+          }
+        ],
+        "bottom": [
+          {
+            "wrapper": "Group",
+            "items": [
+              "PlayBtn",
+              "PrevBtn",
+              "NextBtn"
+            ]
+          },
+          {
+            "wrapper": "Group",
+            "items": [
+              "VolumeBtn"
+            ]
+          },
+          {
+            "wrapper": "Group",
+            "items": [
+              "TimeBtn"
+            ]
+          },
+          {
+            "wrapper": "Blank"
+          },
+          {
+            "wrapper": "Group",
+            "items": [
+              "SubtitleBtn",
+              "SettingBtn",
+              "FullscreenBtn"
+            ],
+            "cap": 2
+          }
+        ]
+      }
+    }
+  }
+});
+</script>
 </body>
 </html>
