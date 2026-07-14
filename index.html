@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>VPE Player Test</title>
+  <script src="https://player.beta-vpe.naverncp.com/v2/ncplayer.2.0.0.js?access_key=77633db832c8a326dda80346f549e425"></script>
+</head>
+<body>
+  <div id="video1" style="width:640px;"></div>
+  <script>
+    new ncplayer('video1', {
+      autostart: true,
+      playlist: [
+        { file: 'https://media.w3.org/2010/05/sintel/trailer.mp4' }
+      ]
+    });
+  </script>
+</body>
+</html>
